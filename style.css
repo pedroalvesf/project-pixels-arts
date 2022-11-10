@@ -9,8 +9,11 @@ body {
     height: 100%;
 }
 .container-color-and-btn{
-    padding-right: 50px ;
-    height: 50%;
+    margin-top: 80px;
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 10px;
+    height: 250px;
+
 }
 .options{
     display: flex;
@@ -24,10 +27,12 @@ body {
 }
 .container-main{
     display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    padding-top: 5%;
 
+
+}
+
+.container-all{
+    padding-left: 10px;
 }
 .size-opt{
 
@@ -41,24 +46,23 @@ body {
 }
 
 #color-palette{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     border: 1px black;
     margin: 2px;
+
 }
 
 .color {
-    width: 30px;
-    height: 25px;
+    width: 50px;
+    height: 50px;
     margin: 1px;
     border: 1px solid black;
+    border-radius: 100%;
 }
 
-.color:first-child{
-    background-color: black;
-}
+
 
 #pixel-board {
     display: grid; 

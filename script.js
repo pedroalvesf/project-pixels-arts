@@ -100,13 +100,12 @@ function changeColors() {
         for (let index2 = 0; index2 < cores; index2++) {
             arrayColors.push(Math.floor(Math.random() * 254));
         }
-        if (index == 0) {
-            arrayColors = [0, 0, 0]
-        }
+        // if (index == 0) {
+        //     arrayColors = [0, 0, 0]
+        // }
         pallette.push(arrayColors)
         colorContainer[index].style.backgroundColor = `rgb(${arrayColors})`
         localStorage.setItem(`colors-${index}`, JSON.stringify(arrayColors))
-        colorContainer[0].style.backgroundColor = 'black';
         colorContainer[0].classList.add('selected')
         localStorage.setItem('colorPalette', JSON.stringify(pallette));
     }
@@ -160,6 +159,8 @@ function btnCreatePixel() {
 function changingBackgroundBodyColor() {
     document.body.style.background =
         "linear-gradient(to bottom right, "
+        + colorContainer[0].style.backgroundColor
+        + ", "
         + colorContainer[1].style.backgroundColor
         + ", "
         + colorContainer[2].style.backgroundColor
