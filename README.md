@@ -8,4 +8,4 @@ This project was built with HTML, CSS and JS only, the goal is to bring a functi
 
 Here is a prinscreen of the project being used: 
 
-<img src="/pixel-art2.png">
+<img src="/print-pixel-art2.png" width= 50%, height=50%> 
