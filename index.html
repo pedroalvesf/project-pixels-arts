@@ -19,13 +19,14 @@
 </head>
 
 <body>
+    <img src="background-image.gif">
     <header class="container-header">
         <h1 id="title">Pixel Art</h1>
     </header>
     <div class="container-main">
         <div class="container-color-and-btn">
             <div class="option">
-                <button id="button-random-color">Cores aleatórias</button>
+                <button id="button-random-color">Change colors</button>
             </div>
             <div id="color-palette">
                 <div class="color"></div>
@@ -41,16 +42,19 @@
         <div class="container-all">
             <div class="size-opt">
                 <div class="size-opt-m">
-                    <input type="number" min='8' value="" class="size" id="board-size">
-                    <button id="generate-board" class="btn-size">Size</button>
+                    <input type="number" min='5' value="" class="size" id="board-size">
+                    <button id="generate-board" class="btn btn-size">Size</button>
                 </div>
-                <button id="clear-board" class="btn-erase">Clear board</button>
+                <button id="clear-board" class="btn btn-erase">Clear board</button>
             </div>
             <div id="pixel-board">
             </div>
-            <p>Pedro Alves / Project Pixel Art </p>
+
         </div>
     </div>
+    <footer class="footer">
+        <p>Pedro Alves / Project Pixel Art </p>
+    </footer>
     <script src="script.js"></script>
 </body>
 

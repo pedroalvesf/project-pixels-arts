@@ -5,7 +5,7 @@ const colorContainer = document.querySelectorAll(".color");
 const colorPalette = document.querySelector("#color-palette")
 const btnErase = document.querySelector("#clear-board");
 const pixelSize = document.querySelector("#board-size");
-let selectedColor = 'rgb(0, 0 ,0)';
+let selectedColor;
 //Verifica se nenhum valor for colocado no input ao clicar no botão, um `alert` é exibido com o texto: 'Board inválido!'
 //colocar em funcoes os elses e ifs 
 const validadeInput = () => pixelSize.value.trim().length > 0;
@@ -66,10 +66,12 @@ function createPixel() {
         for (let index = 0; index < sizeTable; index++) {
             let pixelCel = document.createElement('div');
             pixelCel.setAttribute("class", "pixel");
-            pixelCel.style.backgroundColor = getTableColor(index);
+            pixelCel.style.backgroundColor = 'white' //getTableColor(index);
             pixelCel.setAttribute('data-index', index)
             pixelCelBoard.appendChild(pixelCel);
             pixelCelBoard.style.gridTemplateColumns = `repeat(${matriz}, 1fr)`
+            pixelCelBoard.style.width = `${matriz*40}px`;
+            pixelCelBoard.style.height = `${matriz*40}px`;
             table.push(getTableColor(index))
         }
         localStorage.setItem('pixelBoard', JSON.stringify(table));
@@ -103,6 +105,7 @@ function changeColors() {
         // if (index == 0) {
         //     arrayColors = [0, 0, 0]
         // }
+        
         pallette.push(arrayColors)
         colorContainer[index].style.backgroundColor = `rgb(${arrayColors})`
         localStorage.setItem(`colors-${index}`, JSON.stringify(arrayColors))
@@ -111,6 +114,7 @@ function changeColors() {
     }
     location.reload(); //recharge the page again to do the function again, in this case, the one to change the body color 
 }
+
 const eraseColors = () => {
     btnErase.addEventListener('click', () => {
         const divPixel = document.querySelectorAll(".pixel")
@@ -178,8 +182,8 @@ function changingBackgroundBodyColor() {
 }
 window.onload = function () {
     changingBackgroundBodyColor();
-}
 
+}
 createPixel();
 eraseColors();
 colorPalette.addEventListener('click', colorSelector)
@@ -187,3 +191,4 @@ pixelCelBoard.addEventListener('click', changePixelColor);
 btnChangeColors.addEventListener('click', changeColors);
 btnChangeSize.addEventListener('click', btnCreatePixel);
 reloadColors();
+selectedColor = colorContainer[0].style.backgroundColor;
