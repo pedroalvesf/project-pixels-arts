@@ -6,6 +6,8 @@ This project was built with HTML, CSS and JS only, the goal is to bring a functi
 - DOM manipulation 
 - JS control and development
 
-Here is a prinscreen of the project being used: 
-<img src="/pixel-art-print-2.png" width= 50%, height=50%> 
-<img src="/print-pixel-art2.png" width= 50%, height=50%> 
+Here somo printscreen of the project being used:
+<div display: inline-block>
+<img src="/pixel-art-print-2.png" width= 500px, height=500px> 
+<img src="/print-pixel-art2.png" width= 500px, height=500px> 
+</div>
