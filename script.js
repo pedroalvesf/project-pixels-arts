@@ -165,6 +165,14 @@ function changingBackgroundBodyColor() {
         + colorContainer[2].style.backgroundColor
         + ", "
         + colorContainer[3].style.backgroundColor
+        + ", "
+        + colorContainer[4].style.backgroundColor
+        + ", "
+        + colorContainer[5].style.backgroundColor
+        + ", "
+        + colorContainer[6].style.backgroundColor
+        + ", "
+        + colorContainer[7].style.backgroundColor
         + ")";
 }
 window.onload = function () {

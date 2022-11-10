@@ -11,28 +11,37 @@
 
 <body>
     <header class="container-header">
-        <h1 id="title">Paleta de Cores</h1>
+        <h1 id="title">Pixel Art</h1>
     </header>
     <div class="container-main">
-        <div class="option">
-            <button id="button-random-color">Cores aleatórias</button>
+        <div class="container-color-and-btn">
+            <div class="option">
+                <button id="button-random-color">Cores aleatórias</button>
+            </div>
+            <div id="color-palette">
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+            </div>
+        </div>
+        <div class="container-all">
+            <div class="size-opt">
+                <div class="size-opt-m">
+                    <input type="number" min='1' value="" class="size" id="board-size">
+                    <button id="generate-board" class="btn-size">Size</button>
+                </div>
+                <button id="clear-board" class="btn-erase">Clear board</button>
+            </div>
+            <div id="pixel-board">
+            </div>
+            <p>Pedro Alves / Project Pixel Art </p>
         </div>
     </div>
-    <div id="color-palette">
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-    </div>
-    <div class="size-opt">
-        <input type="number" min='1' value="" class="size" id="board-size">
-        <button id="generate-board" class="btn-size">VQV</button>
-    </div>
-    <button id="clear-board" class="btn-erase">Limpar</button>
-
-    <div id="pixel-board">
-    </div>
-    <p>Pedro Alves / Project Pixel Art </p>
     <script src="script.js"></script>
 </body>
 
